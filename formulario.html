@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Endereço de Entrega</title>
+</head>
+
+<body>
+    <hr>
+    <h2>Resumo do Pedido</h2>
+    <table>
+        <tr>
+            <td>
+                <h3>Camarão ao molho branco - </h3>
+            </td>
+            <td>
+                <h4>R$34,90</h4>
+            </td>
+        <tr>
+            <td>
+                <h3>Pastel de Queijo com Bacon - </h3>
+            </td>
+            <td>
+                <h4>R$20,00</h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>TOTAL DO PEDIDO </h3>
+            </td>
+            <td>
+                <h4>R$54,90</h4>
+            </td>
+        </tr>
+
+
+        </tr>
+    </table>
+    <hr>
+    <h2>Endereço de Entrega</h2>
+    <form action="/enviar-endereco">
+        <label for="nome">Nome completo:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="cep">CEP:</label><br>
+        <input type="text" id="cep" name="cep" required><br><br>
+
+        <label for="rua">Rua:</label><br>
+        <input type="text" id="rua" name="rua" required><br><br>
+
+        <label for="numero">Número:</label><br>
+        <input type="text" id="numero" name="numero" required><br><br>
+
+        <label for="complemento">Complemento:</label><br>
+        <input type="text" id="complemento" name="complemento"><br><br>
+
+        <label for="bairro">Bairro:</label><br>
+        <input type="text" id="bairro" name="bairro" required><br><br>
+
+        <label for="cidade">Cidade:</label><br>
+        <input type="text" id="cidade" name="cidade" required><br><br>
+
+        <label for="estado">Estado:</label><br>
+        <input type="text" id="estado" name="estado" required><br><br>
+
+        <button type="submit">Finalizar pedido</button>
+    </form>
+</body>
+
+</html>
