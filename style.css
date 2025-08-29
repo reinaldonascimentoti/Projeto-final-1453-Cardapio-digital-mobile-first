@@ -40,7 +40,7 @@
 
 body {
   background-color: #f9f9f9;
-}
+  
 
 .header {
   background-color: #e1271e;
@@ -48,7 +48,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   h2 {
     color: white;
   }
@@ -199,29 +199,52 @@ li {
   padding: 0px 43px;
 }
 
+/*********  Menu Pizzas *********/
+/*******************************/
+
 .container-pizzas {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
+.pizzas-busca {
+  display:flex;
+  justify-content: space-between;
+  justify-content: center;
+  gap:70px
+
+}
 .menu-pizzas {
-  font-size: 12px;
+  font-size: 10px;
+  text-align: justify;
   color: #5a5a5a;
   margin-left: 5px;
-  margin-right: 10px;
+  margin-right: 5px;
   h3 {
     color: #000;
   }
 }
 
+.menu-pizzas table {
+  th {
+    text-align: center;
+  }
+}
+.menu-pizzas table {
+  tr {
+    padding: 10px;
+  }
+}
+
 .menu-pizzas img {
-  padding: 5px;
+  padding: 2px;
   border-radius: 10px;
 }
 
 .menu-pizzas td {
-  padding: 0px 5px;
+  padding: 0px 0px 0px 10px;
 }
 
 .menu-pizzas input {
@@ -231,10 +254,11 @@ li {
 
 .pizzas-busca {
   display: flex;
+  justify-content: space-between;
   padding: 0px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-radius: 10px;
-  align-items: flex-start;
+  align-items:center;
 
   input {
     font-size: small;
@@ -247,16 +271,87 @@ li {
     font-style: italic;
   }
 }
+.escolha-sabores{
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: #e7e7e7;
+    color: gray; /* texto do placeholder */
+    font-style: italic;
+}
+
 
 .btn-avancar {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  flex-direction: row;
   color: white;
-  padding: 5px 15px;
+  padding: 5px 10px;
   border-radius: 5px;
   background-color: #1095f3;
   border: none;
-  margin-top: 20px;
+  margin-top: 0px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+  /* Footer fixo */
+  .footer {
+    display: flex;
+    padding: 10px 20px;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  /* Container interno do footer */
+  .menu-footer-pedido {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 5px 5px;
+    display: flex;
+    padding: 15px;
+  }
+
+  /* Ícones e botão alinhados */
+  .icone-footer {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Botão AVANÇAR */
+  .btn-avancar {
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .valor-avancar{
+     padding: 10px 20px;
+    background-color: #1095f3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+
+  }
+
+  /* Ícone do carrinho dentro de círculo azul */
+  .material-icons {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 12px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+  }
+ 
 }
