@@ -5,18 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Pizzas</title>
-    <link rel="stylesheet" href="/atividade-02/style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
-        <div class="logo"><img src="/atividade-02/src/Logo-saborx.png" alt="Logo da SaborX"></div>
+        <div class="logo"><img src="/src/Logo-saborx.png" alt="Logo da SaborX"></div>
         <h2 id="pizzas">Pizzas</h2>
     </header>
     <div class="container-pizzas">
         <div class="pizzas-busca">
-            <label for="inputBusca"></label>
-            <input id="inputBusca" type="text" name="busca" placeholder="Pesquisa pelo nome" id="">
+            <div>
+                <label for="inputBusca">Buscar</label>
+                <input id="inputBusca" type="text" name="busca" placeholder="Pesquise pelo nome" id="">
+            </div>
+            <div class="material-icons md-24 carrinho-icon">
+                add_shopping_cart
+            </div>
+        </div>
+        <div class="escolha-sabores">
+            <h5>Escolha os Sabores</h5>
         </div>
 
         <hr>
@@ -30,7 +39,7 @@
                         <th>Quant.</th>
                     </tr>
                     <tr>
-                        <td><img src="/atividade-02/src/pizza01.jpg" alt="" width="80px"></td>
+                        <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
                         <td>
                             <h3>Pepperoni</h3>
                             (Molho de tomate caseiro, mussarela, pepperoni fatiado e orégano)
@@ -44,7 +53,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="/atividade-02/src/pizza01.jpg" alt="" width="80px"></td>
+                        <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
                         <td>
                             <h3>Camarão Top</h3>
                             (Molho de tomate caseiro, mussarela, filé de camarão salteado, creme chesse, toque de molho
@@ -60,7 +69,7 @@
 
                     </tr>
                     <tr>
-                        <td><img src="/atividade-02/src/pizza01.jpg" alt="" width="80px"></td>
+                        <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
                         <td>
 
                             <h3>Camarão c/catupiry</h3>
@@ -76,7 +85,7 @@
 
                     </tr>
                     <tr>
-                        <td><img src="/atividade-02/src/pizza01.jpg" alt="" width="80px"></td>
+                        <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
                         <td>
                             <h3>Bacon c/catupiry</h3>
                             (Molho de tomate caseiro, mussarela, bacon frito, catupiry original,alho frito e orégano)
@@ -90,7 +99,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="/atividade-02/src/pizza01.jpg" alt="" width="80px"></td>
+                        <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
                         <td>
                             <h3>Bacon</h3>
                             (Molho de tomate caseiro, mussarela, bacon frito e alho frito e orégano)
@@ -109,8 +118,14 @@
             </table>
         </div>
         <hr>
-        <button class="btn-avancar">AVANÇAR</button>
+
     </div>
+    <footer>
+        <div class="menu-footer-pedido">
+            <button class="btn-avancar">AVANÇAR</button>
+            <div class="valor-avancar">R$ 50,90</div>
+        </div>
+    </footer>
 </body>
 
 </html>
