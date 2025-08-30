@@ -165,7 +165,7 @@ body {
   }
 
   .food-image {
-    height: 150px;
+    height: 200px;
     background-color: #ddd;
     display: flex;
     align-items: center;
@@ -195,7 +195,7 @@ body {
     }
   }
   .title-footer {
-    font-size: 10px;
+    font-size: 12px;
     padding: 2px;
   }
 
@@ -220,7 +220,7 @@ body {
     gap: 70px;
   }
   .menu-produto {
-    font-size: 10px;
+    font-size: 12px;
     text-align: justify;
     color: #5a5a5a;
     margin-left: 5px;
@@ -339,7 +339,7 @@ body {
 }
 
 .form-container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 30px auto;
   padding: 20px;
   background-color: #fff;
@@ -348,7 +348,7 @@ body {
 }
 
 .formulario h2 {
-  font-size: 12px;
+  font-size: 14px;
   padding: 10px;
   color: #444;
   border-bottom: 2px solid #ddd;
@@ -367,7 +367,7 @@ body {
 .formulario h3,
 h4,
 h5 {
-  font-size: 10px;
+  font-size: 12px;
   margin: 0;
   font-weight: normal;
 }
@@ -404,7 +404,7 @@ form input[type="text"] {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   transition: background-color 0.3s;
 }
 
@@ -415,7 +415,7 @@ form input[type="text"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   padding: 8px;
   margin: 10px 0px;
   width: 100%;
@@ -423,4 +423,394 @@ form input[type="text"] {
   background-color: #f5f5f5;
   color: gray;
   font-style: italic;
+}
+
+/* Estilos para telas de desktop */
+@media (min-width: 1024px) {
+  body {
+    background-color: #f9f9f9;
+
+    .header {
+      background-color: #e1271e;
+      padding: 0px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      h2 {
+        color: white;
+      }
+    }
+
+    .back-icon {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      padding: 0;
+      margin: 0;
+      height: 80px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 5px;
+    }
+
+    .nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 300;
+      padding: 5px 10px;
+      border-radius: 3px;
+      transition: background-color 0.3s;
+    }
+
+    .material-icons {
+      font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+      color: #ffffff;
+      font-size: 60px;
+      margin-bottom: 5px;
+    }
+
+    /* Esconde o checkbox visualmente */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Estilo do ícone */
+    .menu-icon {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0px;
+    }
+
+    /* Esconde o menu por padrão */
+    .menu-items {
+      display: none;
+      list-style: none;
+      margin: 5px;
+      padding: 10px;
+      background-color: #ffffff;
+      position: absolute;
+      top: 50px;
+      right: 5px;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-items li {
+      color: #e1271e;
+      margin-top: 5px;
+      margin: 5px;
+    }
+
+    .menu-items a {
+      color: #e1271e;
+    }
+
+    /* Mostra o menu quando o checkbox está marcado */
+    #menu-toggle:checked ~ .menu-items {
+      display: block;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0px 5px;
+    }
+
+    .food-item {
+      flex: 1;
+      min-width: 150px;
+      max-width: 150px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .food-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .food-item a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .food-image {
+      height: 180px;
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-weight: bold;
+    }
+
+    .food-name {
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .menu-footer {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      padding: 5px 5px;
+      bottom: 0;
+      width: 100%;
+      background: #e1271e;
+      color: white;
+      text-align: center;
+      h2 {
+        color: white;
+      }
+    }
+    .title-footer {
+      font-size: 10px;
+      padding: 2px;
+    }
+
+    .icone-footer span {
+      padding: 0px 43px;
+    }
+
+    /*********  Menu Produto *********/
+    /*******************************/
+
+    .container-produto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .produto-busca {
+      display: flex;
+      justify-content: space-between;
+      justify-content: center;
+      gap: 70px;
+    }
+    .menu-produto {
+      font-size: 10px;
+      text-align: justify;
+      color: #5a5a5a;
+      margin-left: 5px;
+      margin-right: 5px;
+      h3 {
+        color: #000;
+      }
+    }
+
+    .menu-produto table {
+      th {
+        text-align: center;
+      }
+    }
+    .menu-produto table {
+      tr {
+        padding: 10px;
+      }
+    }
+
+    .menu-produto img {
+      padding: 2px;
+      border-radius: 10px;
+    }
+
+    .menu-produto td {
+      padding: 0px 0px 0px 10px;
+    }
+
+    .menu-produto input {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .produto-busca {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      align-items: center;
+
+      input {
+        font-size: small;
+        color: black; /* texto digitado */
+      }
+
+      input::placeholder {
+        background-color: #e7e7e7;
+        color: gray; /* texto do placeholder */
+        font-style: italic;
+      }
+    }
+    .escolha-sabores {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      margin-bottom: 15px;
+      width: 100%;
+      border-radius: 5px;
+      background-color: #e7e7e7;
+      color: gray; /* texto do placeholder */
+      font-style: italic;
+    }
+
+    .carrinho-icon {
+      background-color: #007bff;
+      color: white;
+      border-radius: 50%;
+      padding: 12px;
+      width: 48px;
+      height: 48px;
+      display: flex;
+    }
+
+    .btn-avancar {
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: #1095f3;
+      border: none;
+      margin-top: 0px;
+    }
+    .menu-preco {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      margin: 5px;
+    }
+    .menu-botao {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #e7e7e7;
+      color: gray; /* texto do placeholder */
+      font-style: italic;
+    }
+    .preco-total {
+      display: flex;
+      font-size: medium;
+      align-items: center;
+      padding: 5px;
+      font-weight: bold;
+    }
+  }
+
+  /*********  Formulário *********/
+  /*******************************/
+  .formulario {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 40px;
+  }
+
+  .form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .formulario h2 {
+    font-size: 10px;
+    padding: 10px;
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .formulario table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  .formulario table td {
+    padding: 5px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .formulario h3,
+  h4,
+  h5 {
+    font-size: 12px;
+    margin: 0;
+    font-weight: normal;
+  }
+  .formulario form {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+  }
+
+  form label {
+    font-size: small;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+
+  form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+
+  .formulario button {
+    background-color: #0078d7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+
+  .formulario button:hover {
+    background-color: #005fa3;
+  }
+  .resumo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding: 8px;
+    margin: 10px 0px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: gray;
+    font-style: italic;
+  }
 }
