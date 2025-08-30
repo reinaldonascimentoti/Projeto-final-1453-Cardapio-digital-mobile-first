@@ -11,68 +11,74 @@
 
 <body class="formulario">
     <header class="header">
-        <div class="logo"><img src="/src/Logo-saborx.png" alt="Logo da SaborX"></div>
+        <div class="back-icon"><a href="/index.html" class="material-icons md-24 back-icon">
+                arrow_back_ios
+            </a>
+            <div class="logo">
+                <img src="/src/Logo-saborx.png" alt="Logo da SaborX">
+            </div>
+        </div>
         <h2 id="pizzas">Pedido nº 0000000</h2>
     </header>
     <div class="form-container">
-    <div class="resumo">Resumo do Pedido</div>
-    <table>
-        <tr>
-            <td>
-                <h5>Camarão ao molho branco - </h5>
-            </td>
-            <td>
-                <h5>R$34,90</h5>
-            </td>
-        <tr>
-            <td>
-                <h5>Pastel de Queijo c/ Bacon - </h5>
-            </td>
-            <td>
-                <h5>R$20,00</h5>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h4>TOTAL DO PEDIDO </h4>
-            </td>
-            <td>
-                <h4>R$54,90</h4>
-            </td>
-        </tr>
-        </tr>
-    </table>
-    <hr>
-    <div class="resumo">Endereço para entrega</div>
-    <form action="/enviar-endereco">
-        <label for="nome">Nome completo:</label>
-        <input type="text" id="nome" name="nome" required>
-        <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone" required>
+        <div class="resumo">Resumo do Pedido</div>
+        <table>
+            <tr>
+                <td>
+                    <h5>Camarão ao molho branco - </h5>
+                </td>
+                <td>
+                    <h5>R$34,90</h5>
+                </td>
+            <tr>
+                <td>
+                    <h5>Pastel de Queijo c/ Bacon - </h5>
+                </td>
+                <td>
+                    <h5>R$20,00</h5>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>TOTAL DO PEDIDO </h4>
+                </td>
+                <td>
+                    <h4>R$54,90</h4>
+                </td>
+            </tr>
+            </tr>
+        </table>
+        <hr>
+        <div class="resumo">Endereço para entrega</div>
+        <form action="/enviar-endereco">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
 
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" required>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required>
 
-        <label for="rua">Rua:</label>
-        <input type="text" id="rua" name="rua" required>
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua" required>
 
-        <label for="numero">Número:</label>
-        <input type="text" id="numero" name="numero" required>
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero" required>
 
-        <label for="complemento">Complemento:</label>
-        <input type="text" id="complemento" name="complemento">
+            <label for="complemento">Complemento:</label>
+            <input type="text" id="complemento" name="complemento">
 
-        <label for="bairro">Bairro:</label>
-        <input type="text" id="bairro" name="bairro" required>
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" required>
 
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" required>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
 
-        <label for="estado">Estado:</label>
-        <input type="text" id="estado" name="estado" required>
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required>
 
-        <button type="submit">Finalizar pedido</button>
-    </form>
+            <button type="submit">Finalizar pedido</button>
+        </form>
     </div>
 </body>
 
