@@ -198,23 +198,23 @@ body {
     padding: 0px 43px;
   }
 
-  /*********  Menu Pizzas *********/
+  /*********  Menu Produto *********/
   /*******************************/
 
-  .container-pizzas {
+  .container-produto {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
-  .pizzas-busca {
+  .produto-busca {
     display: flex;
     justify-content: space-between;
     justify-content: center;
     gap: 70px;
   }
-  .menu-pizzas {
+  .menu-produto {
     font-size: 10px;
     text-align: justify;
     color: #5a5a5a;
@@ -225,32 +225,32 @@ body {
     }
   }
 
-  .menu-pizzas table {
+  .menu-produto table {
     th {
       text-align: center;
     }
   }
-  .menu-pizzas table {
+  .menu-produto table {
     tr {
       padding: 10px;
     }
   }
 
-  .menu-pizzas img {
+  .menu-produto img {
     padding: 2px;
     border-radius: 10px;
   }
 
-  .menu-pizzas td {
+  .menu-produto td {
     padding: 0px 0px 0px 10px;
   }
 
-  .menu-pizzas input {
+  .menu-produto input {
     text-align: center;
     justify-content: center;
   }
 
-  .pizzas-busca {
+  .produto-busca {
     display: flex;
     justify-content: space-between;
     padding: 0px 15px;
@@ -270,6 +270,8 @@ body {
     }
   }
   .escolha-sabores {
+    display: flex;
+    justify-content: space-between;
     padding: 15px;
     margin-bottom: 15px;
     width: 100%;
@@ -277,6 +279,16 @@ body {
     background-color: #e7e7e7;
     color: gray; /* texto do placeholder */
     font-style: italic;
+  }
+
+  .carrinho-icon {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 12px;
+    width: 48px;
+    height: 48px;
+    display: flex;
   }
 
   .btn-avancar {
@@ -287,67 +299,123 @@ body {
     border: none;
     margin-top: 0px;
   }
-
-  /* Mobile */
-  @media (max-width: 480px) {
-    /* Footer fixo */
-    .footer {
-      display: flex;
-      padding: 10px 20px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #ffffff;
-      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-
-    /* Container interno do footer */
-    .menu-footer-pedido {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5px 5px;
-      display: flex;
-      padding: 15px;
-    }
-
-    /* Ícones e botão alinhados */
-    .icone-footer {
-      display: flex;
-      align-items: center;
-    }
-
-    /* Botão AVANÇAR */
-    .btn-avancar {
-      font-size: 15px;
-      padding: 10px 20px;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .valor-avancar {
-      padding: 10px 20px;
-      background-color: #1095f3;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    /* Ícone do carrinho dentro de círculo azul */
-    .material-icons {
-      background-color: #007bff;
-      color: white;
-      border-radius: 50%;
-      padding: 12px;
-      width: 48px;
-      height: 48px;
-      display: flex;
-    }
+  .menu-preco {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 5px;
   }
+  .menu-botao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #e7e7e7;
+    color: gray; /* texto do placeholder */
+    font-style: italic;
+  }
+  .preco-total {
+    display: flex;
+    font-size: medium;
+    align-items: center;
+    padding: 5px;
+    font-weight: bold;
+  }
+}
+
+/*********  Formulário *********/
+/*******************************/
+.formulario {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 40px;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario h2 {
+  font-size: 12px;
+  padding: 10px;
+  color: #444;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.formulario table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+.formulario table td {
+  padding: 5px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.formulario h3,
+h4,
+h5 {
+  font-size: 10px;
+  margin: 0;
+  font-weight: normal;
+}
+.formulario form {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+form label {
+  font-size: small;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.formulario button {
+  background-color: #0078d7;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #005fa3;
+}
+.resumo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  padding: 8px;
+  margin: 10px 0px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  color: gray;
+  font-style: italic;
 }

@@ -1,69 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Massas</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <h2><i>Massas</i></h2>
-    <hr>
-    <table>
-        <tbody>
-            <tr>
-                <th>*****</th>
-                <th>Tipo</th>
-                <th>Preço</th>
-                <th>Quant.</th>
-            </tr>
+    <header class="header">
+        <div class="logo"><img src="/src/Logo-saborx.png" alt="Logo da SaborX"></div>
+        <h2 id="Massa">Massas</h2>
+    </header>
+    <div class="container-produto">
+        <hr>
+        <div class="menu-produto">
+            <div class="produto-busca">
+                <div class="buscar">
+                    <label for="inputBusca">Buscar</label>
+                    <input id="inputBusca" type="text" name="busca" placeholder="Pesquise pelo nome" id="">
+                </div>
+                <div class="material-icons md-24 carrinho-icon">
+                    add_shopping_cart
+                </div>
+            </div>
+            <div class="escolha-sabores">
+                <h5>Escolha os Sabores</h5>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>*****</th>
+                        <th>Tipo</th>
+                        <th>Preço</th>
+                        <th>Quant.</th>
+                    </tr>
+                    <tr>
+                        <td><img src="/src/massa01.png" alt="Bolonhesa" width="80px"></td>
+                        <td>
+                            <h3>Massa Bolonhesa</h3>
+                            (Carne moída, molho de tomate, azeite e parmesão)
+                        </td>
+                        <td>
+                            <h4>R$52,90</h4>
+                        </td>
+                        </td>
+                        <label for="qtdBolonhesa"></label>
+                        <td><input type="number" name="qtdBolonhesa" id="quantidade-Bolonhesa" min="1" max="10"
+                                value=""></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/src/massa01.png" alt="Massa Nordestina" width="80px"></td>
+                        <td>
+                            <h3>Massa Nordestina</h3>
+                            (Carne de sol, cebola roxa e queijo coalho)
+                        </td>
+                        <td>
+                            <h4>R$35,90</h4>
+                        </td>
+                        <label for="qtdNordestina"></label>
+                        <td><input type="number" name="qtdNordestina" id="quantidade-Nordestina" min="1" max="10"
+                                value=""></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/src/massa01.png" alt="Massa Camarão" width="80px"></td>
+                        <td>
+                            <h3>Camarão ao molho branco</h3>
+                            (Massa 100% italiana,file de camarão refogado,molho branco e mussarela)
+                        </td>
+                        <td>
+                            <h4>R$34,90</h4>
+                        </td>
+                        <label for="qtdCamaraoBranco"></label>
+                        <td><input type="number" name="qtdCamaraoBranco" id="quantidade-CamaraoBranco" min="1" max="10"
+                                value=""></td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="menu-botao">
+                <div>
+                    <a href="formulario.html"><button class="btn-avancar">AVANÇAR</button></a>
+                </div>
+                <div class="preco-total">R$ 50,99</div>
+            </div>
+        </div>
 
-            <tr>
-                <td><img src="/atividade-02/src/massa01.png" alt="" width="80px"></td>
-                <td>
-                    <h3>Massa Bolonhesa</h3>
-                    (Carne moída, molho de tomate, azeite e parmesão)
-                </td>
-                <td>
-                    <h4>R$32,90</h4>
-                </td>
-                <label for="qtdBolonhesa"></label>
-                <td><input type="number" name="qtdBolonhesa"></td>
-            </tr>
-            <tr>
-                <td><img src="/atividade-02/src/massa01.png" alt="" width="80px"></td>
-                <td>
-                    <h3>Massa Nordestina</h3>
-                    (Carne de sol, cebola roxa e queijo coalho)
-                </td>
-                <td>
-                    <h4>R$35,90</h4>
-                </td>
-                <label for="qtdNordestina"></label>
-                <td><input type="number" name="qtdNordestina"></td>
-            </tr>
-            <tr>
-                <td><img src="/atividade-02/src/massa01.png" alt="" width="80px"></td>
-                <td>
-                    <h3>Camarão ao molho branco</h3>
-                    (Massa 100% italiana,file de camarão refogado,molho branco e mussarela)
-                </td>
-                <td>
-                    <h4>R$34,90</h4>
-                </td>
-                <label for="qtdCamaraoBranco"></label>
-                <td><input type="number" name="qtdCamaraoBranco"></td>
-            </tr>
-            </Tr>
+    </div>
 
-        </tbody>
-    </table>
-    <hr>
-    <br>
-    <button>ADICIONAR</button>
-    <a href="formulario.html">
-        <button>FINALIZAR PEDIDO</button>
-    </a>
+</body>
 
 </html>

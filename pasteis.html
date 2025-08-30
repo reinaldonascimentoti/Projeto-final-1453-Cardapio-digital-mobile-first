@@ -5,65 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Pasteis</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <h2><i>Pasteis</i></h2>
-    <hr>
-    <table>
-        <tbody>
-            <tr>
-                <th>*****</th>
-                <th>Tipo</th>
-                <th>Preço</th>
-                <th>Quant.</th>
-            </tr>
-
-            <tr>
-                <td><img src="/atividade-02/src/pastel01.png" alt="" width="80px"></td>
-                <td>
-                    <h3>Pastel de Queijo com Bacon</h3>
-                    (Massa 100% artesanal acompanhada de queijo da casa e bacon em cubos)
-                </td>
-                <td>
-                    <h4>R$20,90</h4>
-                </td>
-                <label for="qtdCamarao"></label>
-                <td><input type="number" name="qtdCamarao"></td>
-            </tr>
-            <tr>
-                <td><img src="/atividade-02/src/pastel01.png" alt="" width="80px"></td>
-                <td>
-                    <h3>Pastel de Frango c/ milho</h3>
-                    (Massa 100% artesanal acompanhado defrango desfiado e milho verde)
-                </td>
-                <td>
-                    <h4>R$16,90</h4>
-                </td>
-                <label for="qtdCamarao"></label>
-                <td><input type="number" name="qtdCamarao"></td>
-            </tr>
-            <tr>
-                <td><img src="/atividade-02/src/pastel01.png" alt="" width="80px"></td>
-                <td>
-                    <h3>Pastel de Camarão com Cream cheese</h3>
-                    (Massa 100% artesanal acompanhado de filé de camarão refogado e cream cheese polenguinho)
-                </td>
-                <td>
-                    <h4>R$25,00</h4>
-                </td>
-                <label for="qtdCamarao"></label>
-                <td><input type="number" name="qtdCamarao"></td>
-            </tr>
-            </Tr>
-
-        </tbody>
-    </table>
-    <hr>
-    <br>
-    <button>ADICIONAR</button>
-    <a href="formulario.html">
-        <button>FINALIZAR PEDIDO</button>
-    </a>
+    <header class="header">
+        <div class="logo"><img src="/src/Logo-saborx.png" alt="Logo da SaborX"></div>
+        <h2 id="Massa">Massas</h2>
+    </header>
+    <div class="container-produto">
+        <hr>
+        <div class="menu-produto">
+            <div class="produto-busca">
+                <div class="buscar">
+                    <label for="inputBusca">Buscar</label>
+                    <input id="inputBusca" type="text" name="busca" placeholder="Pesquise pelo nome" id="">
+                </div>
+                <div class="material-icons md-24 carrinho-icon">
+                    add_shopping_cart
+                </div>
+            </div>
+            <div class="escolha-sabores">
+                <h5>Escolha os Sabores</h5>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>*****</th>
+                        <th>Tipo</th>
+                        <th>Preço</th>
+                        <th>Quant.</th>
+                    </tr>
+                    <tr>
+                        <td><img src="/src/pastel01.png" alt="Pastel de Queijo" width="80px"></td>
+                        <td>
+                            <h3>Pastel de Queijo com Bacon</h3>
+                            (Massa 100% artesanal acompanhada de queijo da casa e bacon em cubos)
+                        </td>
+                        <td>
+                            <h4>R$20,90</h4>
+                        </td>
+                        </td>
+                        <label for="qtdpastelQueijo"></label>
+                        <td><input type="number" name="qtdpastelQueijo" id="quantidade-pastelQueijo" min="1" max="10"
+                                value=""></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/src/pastel01.png" alt="Massa Nordestina" width="80px"></td>
+                        <td>
+                            <h3>Pastel de Frango c/ milho</h3>
+                            (Massa 100% artesanal acompanhado defrango desfiado e milho verde)
+                        </td>
+                        <td>
+                            <h4>R$16,90</h4>
+                        </td>
+                        <label for="qtdpastelFrango"></label>
+                        <td><input type="number" name="qtdpastelFrango" id="quantidade-pastelFrango" min="1" max="10"
+                                value=""></td>
+                    </tr>
+                    <tr>
+                        <td><img src="/src/pastel01.png" alt="Pastel Camarão" width="80px"></td>
+                        <td>
+                            <h3>Pastel de Camarão com Cream cheese</h3>
+                            (Massa 100% artesanal acompanhado de filé de camarão refogado e cream cheese polenguinho)
+                        </td>
+                        <td>
+                            <h4>R$25,00</h4>
+                        </td>
+                        <label for="qtdpastelCamarao"></label>
+                        <td><input type="number" name="qtdpastelCamarao" id="quantidade-pastelCamarao" min="1" max="10"
+                                value=""></td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="menu-botao">
+                <div>
+                    <a href="formulario.html"><button class="btn-avancar">AVANÇAR</button></a>
+                </div>
+                <div class="preco-total">R$ 50,99</div>
+            </div>
+        </div>
+    </div>
 
 </html>
