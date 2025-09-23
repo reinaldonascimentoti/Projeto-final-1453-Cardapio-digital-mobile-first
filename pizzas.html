@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width", initial-scale=1.0">
     <title>Pizzas</title>
     <link rel="stylesheet" href="/style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,6 +19,9 @@
         </div>
         <h2 id="pizzas">Pizzas</h2>
     </header>
+      <div id="carrinho-icon" class="material-icons md-24 carrinho-icon">
+                    add_shopping_cart
+                </div>
     <div class="container-produto">
         <hr>
         <div class="menu-produto">
@@ -27,14 +30,11 @@
                     <label for="inputBusca">Buscar</label>
                     <input id="inputBusca" type="text" name="busca" placeholder="Pesquise pelo nome" id="">
                 </div>
-                <div class="material-icons md-24 carrinho-icon">
-                    add_shopping_cart
-                </div>
-            </div>
+                          </div>
             <div class="escolha-sabores">
                 <h5>Escolha os Sabores</h5>
             </div>
-            <table>
+            <table id="tabela-produtos">
                 <tbody>
                     <tr>
                         <th>*****</th>
@@ -51,10 +51,9 @@
                         <td>
                             <h4>R$52,90</h4>
                         </td>
-                        <td><label for="quantidade-Pepperoni"></label>
-                            <input type="number" id="quantidade-Pepperoni" name="quantidade-Pepperoni" min="1" max="10"
-                                value="">
-                        </td>
+                        <td>
+          <button class="btn-quant" onclick="adicionarItem('Pizza - Pepperoni', 52.90)">+</button>
+        </td>
                     </tr>
                     <tr>
                         <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
@@ -66,11 +65,10 @@
                         <td>
                             <h4>R$65,90</h4>
                         </td>
-                        <td><label for="quantidade-Pepperoni"></label>
-                            <input type="number" id="quantidade-Pepperoni" name="quantidade-Pepperoni" min="1" max="10"
-                                value="">
-                        </td>
-
+                        <td>
+                            <button class="btn-quant" onclick="adicionarItem('Pizza - Camarão Top', 65.90)">+</button>
+</td>
+                        
                     </tr>
                     <tr>
                         <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
@@ -82,12 +80,9 @@
                         <td>
                             <h4>R$62,90</h4>
                         </td>
-                        <td><label for="quantidade-camarao-catupiry"></label>
-                            <input type="number" id="quantidade-camarao-catupiry" name="quantidade-camarao-catupiry"
-                                min="1" max="10" value="">
-                        </td>
-
-                    </tr>
+                        <td><button class="btn-quant" onclick="adicionarItem('Pizza Camarão c/ catupiry', 62.90)">+</button>
+</td>
+                                            </tr>
                     <tr>
                         <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
                         <td>
@@ -96,11 +91,8 @@
                         </td>
                         <td>
                             <h4>R$55,00</h4>
-                        </td>
-                        <td><label for="quantidade-bacon-catupiry"></label>
-                            <input type="number" id="quantidade-bacon-catupiry" name="quantidade-bacon-catupiry" min="1"
-                                max="10" value="">
-                        </td>
+                        </td><td><button class="btn-quant" onclick="adicionarItem('Pizza - Bacon c/ catupiry', 55.00)">+</button></td>
+                        
                     </tr>
                     <tr>
                         <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
@@ -111,10 +103,8 @@
                         <td>
                             <h4>R$50,90</h4>
                         </td>
-                        <td><label for="quantidade-Bacon"></label>
-                            <input type="number" id="quantidade-Bacon" name="quantidade-Bacon" min="1" max="10"
-                                value="">
-                        </td>
+                        <td><button class="btn-quant" onclick="adicionarItem('Pizza- Bacon', 50.90)">+</button></td>
+                      
                     </tr>
                     </Tr>
 
@@ -128,6 +118,15 @@
             </div>
         </div>
     </div>
+
+    
+    <div class="container-carinho">
+        <h3 class="title-car">Meu Carrinho</h3>
+        <div id="carrinho"></div>
+    </div>
+    
+
+    <script src="carrinho.js"></script>
 </body>
 
 </html>
