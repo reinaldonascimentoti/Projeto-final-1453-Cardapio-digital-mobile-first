@@ -40,19 +40,18 @@
 
 body {
   background-color: #f9f9f9;
-
-  .header {
-    background-color: #e1271e;
-    padding: 0px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    h2 {
-      color: white;
-    }
+}
+header {
+  background-color: #e1271e;
+  padding: 0px 15px;
+  display: flex;
+  justify-content;
+  align-items: center;
+  margin-bottom: 10px;
+  h2 {
+    color: white;
   }
-
+}
   .back-icon {
     text-decoration: none;
     display: flex;

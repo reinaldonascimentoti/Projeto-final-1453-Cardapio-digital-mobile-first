@@ -90,10 +90,4 @@ function renderizarCarrinho() {
   }
 }
 
-// const icone = document.getElementById("carrinho-icon");
-// const menu = document.querySelector(".container-produto");
-// icone.addEventListener("click", () => {
-//   menu.classList = "hidden";
-// });
-
 renderizarCarrinho();
