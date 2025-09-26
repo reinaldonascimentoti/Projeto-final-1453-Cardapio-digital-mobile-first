@@ -20,4 +20,4 @@
 ---
 
 
-<img src="/imagens/saborx-app.png" alt="Texto Alternativo">
+<img src="/imagens/saborx-app2.png" alt="Texto Alternativo">
