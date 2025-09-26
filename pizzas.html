@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width", initial-scale=1.0">
+    <meta name="viewport" content="width" , initial-scale=1.0">
     <title>Pizzas</title>
     <link rel="stylesheet" href="/style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,21 +19,27 @@
         </div>
         <h2 id="pizzas">Pizzas</h2>
     </header>
-      <div id="carrinho-icon" class="material-icons md-24 carrinho-icon">
-                    add_shopping_cart
-                </div>
+
     <div class="container-produto">
-        <hr>
         <div class="menu-produto">
             <div class="produto-busca">
                 <div class="buscar">
                     <label for="inputBusca">Buscar</label>
                     <input id="inputBusca" type="text" name="busca" placeholder="Pesquise pelo nome" id="">
                 </div>
-                          </div>
+
+                <div>
+                    <a href="/carrinho.html" id="carrinho-icon" class="material-icons md-24 carrinho-icon">
+                        add_shopping_cart
+                        <span id="carrinho-contador" class="badge"></span>
+                    </a>
+                </div>
+            </div>
+
             <div class="escolha-sabores">
                 <h5>Escolha os Sabores</h5>
             </div>
+
             <table id="tabela-produtos">
                 <tbody>
                     <tr>
@@ -52,8 +58,8 @@
                             <h4>R$52,90</h4>
                         </td>
                         <td>
-          <button class="btn-quant" onclick="adicionarItem('Pizza - Pepperoni', 52.90)">+</button>
-        </td>
+                            <button class="btn-quant" onclick="adicionarItem('Pizza - Pepperoni', 52.90)">+</button>
+                        </td>
                     </tr>
                     <tr>
                         <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
@@ -67,8 +73,8 @@
                         </td>
                         <td>
                             <button class="btn-quant" onclick="adicionarItem('Pizza - Camarão Top', 65.90)">+</button>
-</td>
-                        
+                        </td>
+
                     </tr>
                     <tr>
                         <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
@@ -80,9 +86,10 @@
                         <td>
                             <h4>R$62,90</h4>
                         </td>
-                        <td><button class="btn-quant" onclick="adicionarItem('Pizza Camarão c/ catupiry', 62.90)">+</button>
-</td>
-                                            </tr>
+                        <td><button class="btn-quant"
+                                onclick="adicionarItem('Pizza Camarão c/ catupiry', 62.90)">+</button>
+                        </td>
+                    </tr>
                     <tr>
                         <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
                         <td>
@@ -91,8 +98,10 @@
                         </td>
                         <td>
                             <h4>R$55,00</h4>
-                        </td><td><button class="btn-quant" onclick="adicionarItem('Pizza - Bacon c/ catupiry', 55.00)">+</button></td>
-                        
+                        </td>
+                        <td><button class="btn-quant"
+                                onclick="adicionarItem('Pizza - Bacon c/ catupiry', 55.00)">+</button></td>
+
                     </tr>
                     <tr>
                         <td><img src="/src/pizza01.jpg" alt="" width="80px"></td>
@@ -104,7 +113,7 @@
                             <h4>R$50,90</h4>
                         </td>
                         <td><button class="btn-quant" onclick="adicionarItem('Pizza- Bacon', 50.90)">+</button></td>
-                      
+
                     </tr>
                     </Tr>
 
@@ -119,13 +128,12 @@
         </div>
     </div>
 
-    
-    <div class="container-carinho">
-        <h3 class="title-car">Meu Carrinho</h3>
-        <div id="carrinho"></div>
+    <div class="hidden">
+        <div class="container-carinho">
+            <h3 class="title-car">Meu Carrinho</h3>
+            <div id="carrinho"></div>
+        </div>
     </div>
-    
-
     <script src="carrinho.js"></script>
 </body>
 

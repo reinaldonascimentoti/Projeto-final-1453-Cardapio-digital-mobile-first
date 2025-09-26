@@ -1,4 +1,4 @@
-const carrinho = [];
+const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
 function adicionarItem(nome, preco) {
   const existente = carrinho.find((item) => item.nome === nome);
@@ -7,6 +7,7 @@ function adicionarItem(nome, preco) {
   } else {
     carrinho.push({ nome, preco, quantidade: 1 });
   }
+  salvarCarrinho();
   renderizarCarrinho();
 }
 
@@ -18,23 +19,28 @@ function alterarQuantidade(nome, delta) {
       const index = carrinho.indexOf(item);
       carrinho.splice(index, 1);
     }
+    salvarCarrinho();
     renderizarCarrinho();
   }
+}
+function salvarCarrinho() {
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
 }
 
 function renderizarCarrinho() {
   const div = document.getElementById("carrinho");
-
   div.innerHTML = ``;
   let total = 0;
+  let quantidadeTotal = 0;
 
   carrinho.forEach((item) => {
     const subtotal = item.quantidade * item.preco;
     total += subtotal;
+    quantidadeTotal += item.quantidade;
 
     const linha = document.createElement("div");
     linha.className = "item-carrinho";
-    linha.innerHTML = ` <img src="/src/pizza01.jpg" alt="" width="60px"></td>
+    linha.innerHTML = ` <img src="/src/Logo-saborx.png" alt="" width="60px"></td>
       ${item.nome}`;
     div.appendChild(linha);
 
@@ -73,10 +79,21 @@ function renderizarCarrinho() {
    <strong>Total: R$ ${total.toFixed(2).replace(".", ",")}</strong>
     </div>`;
   div.appendChild(totalDiv);
+
+  // Atualiza o contador no ícone
+  const contador = document.getElementById("carrinho-contador");
+  if (quantidadeTotal > 0) {
+    contador.textContent = quantidadeTotal;
+    contador.style.display = "inline-block";
+  } else {
+    contador.style.display = "none";
+  }
 }
 
-const icone = document.getElementById("carrinho-icon");
-const menu = document.querySelector(".container-produto");
-icone.addEventListener("click", () => {
-  menu.classList = "hidden";
-});
+// const icone = document.getElementById("carrinho-icon");
+// const menu = document.querySelector(".container-produto");
+// icone.addEventListener("click", () => {
+//   menu.classList = "hidden";
+// });
+
+renderizarCarrinho();

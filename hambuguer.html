@@ -18,9 +18,97 @@
                 <img src="/src/Logo-saborx.png" alt="Logo da SaborX">
             </div>
         </div>
-        <h2 id="Massa">Hamburguer</h2>
+        <h2 id="Hamburguer">Hamburguer</h2>
     </header>
-    <h2>Em construção</h2>
+    <div class="container-produto">
+        <hr>
+        <div class="menu-produto">
+            <div class="produto-busca">
+                <div class="buscar">
+                    <label for="inputBusca">Buscar</label>
+                    <input id="inputBusca" type="text" name="busca" placeholder="Pesquise pelo nome" id="">
+                </div>
+             <div>
+            <a href="/carrinho.html" id="carrinho-icon" class="material-icons md-24 carrinho-icon">
+  add_shopping_cart
+  <span id="carrinho-contador" class="badge"></span>
+</a></div>
+          
+          </a>
+        </div>
+            <div class="escolha-sabores">
+                <h5>Escolha os Sabores</h5>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>*****</th>
+                        <th>Tipo</th>
+                        <th>Preço</th>
+                        <th>Quant.</th>
+                    </tr>
+                    <tr>
+                        <td><img src="/src/Burguer.png" alt="Bolonhesa" width="80px"></td>
+                        <td>
+                            <h3>BATATA COM CHEDDAR E BACON</h3>
+                            BATATA CRINKLE FRITA, AMERICAN CHEESE E BACON CROCANTE.
+                        </td>
+                        <td>
+                            <h4>R$38,90</h4>
+                        </td>
+                        </td>
+                        <td><button class="btn-quant" onclick="adicionarItem('BATATA COM CHEDDAR E BACON', 38.90)">
+                                +
+                            </button></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="/src/Burguer.png" alt="Massa Nordestina" width="80px"></td>
+                        <td>
+                            <h3>BURGUER - BUNITIM</h3>
+                            Pão brioche, 150g de carne especial 1953, queijo cheddar, bacon, cebola caramelizada e molho especial.
+                        </td>
+                        <td>
+                            <h4>R$32,90</h4>
+                        </td>
+                        <td><button class="btn-quant" onclick="adicionarItem('BURGUER 09 - BUNITIM', 32.90)">
+                                +
+                            </button></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="/src/Burguer.png" alt="Burguer" width="80px"></td>
+                        <td>
+                            <h3>BURGUER - PAI DEGUA</h3>
+                            Pão brioche, 150g carne especial 1953, queijo cheddar, bacon, salada e maionese especial + BATATA FRITA
+                        </td>
+                        <td>
+                            <h4>R$34,90</h4>
+                        </td>
+                        <td><button class="btn-quant" onclick="adicionarItem('BURGUER 04 - PAI DEGUA', 34.90)">
+                                +
+                            </button></td>
+                        </td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="menu-botao">
+                <div>
+                    <a href="formulario.html"><button class="btn-avancar">AVANÇAR</button></a>
+                </div>
+                <div class="preco-total">R$ 50,99</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="hidden">
+        <div class="container-carinho">
+            <h3 class="title-car">Meu Carrinho</h3>
+            <div id="carrinho"></div>
+        </div>
+    </div>
+    <script src="carrinho.js"></script>
 </body>
 
 </html>

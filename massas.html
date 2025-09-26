@@ -28,10 +28,14 @@
                     <label for="inputBusca">Buscar</label>
                     <input id="inputBusca" type="text" name="busca" placeholder="Pesquise pelo nome" id="">
                 </div>
-                <div class="material-icons md-24 carrinho-icon">
-                    add_shopping_cart
-                </div>
-            </div>
+             <div>
+            <a href="/carrinho.html" id="carrinho-icon" class="material-icons md-24 carrinho-icon">
+  add_shopping_cart
+  <span id="carrinho-contador" class="badge"></span>
+</a></div>
+          
+          </a>
+        </div>
             <div class="escolha-sabores">
                 <h5>Escolha os Sabores</h5>
             </div>
@@ -50,12 +54,13 @@
                             (Carne moída, molho de tomate, azeite e parmesão)
                         </td>
                         <td>
-                            <h4>R$52,90</h4>
+                            <h4>R$39,90</h4>
                         </td>
                         </td>
-                        <label for="qtdBolonhesa"></label>
-                        <td><input type="number" name="qtdBolonhesa" id="quantidade-Bolonhesa" min="1" max="10"
-                                value=""></td>
+                        <td><button class="btn-quant" onclick="adicionarItem('Massa Bolonhesa', 39.90)">
+                                +
+                            </button></td>
+                        </td>
                     </tr>
                     <tr>
                         <td><img src="/src/massa01.png" alt="Massa Nordestina" width="80px"></td>
@@ -66,9 +71,10 @@
                         <td>
                             <h4>R$35,90</h4>
                         </td>
-                        <label for="qtdNordestina"></label>
-                        <td><input type="number" name="qtdNordestina" id="quantidade-Nordestina" min="1" max="10"
-                                value=""></td>
+                        <td><button class="btn-quant" onclick="adicionarItem('Massa Nordestina', 35.90)">
+                                +
+                            </button></td>
+                        </td>
                     </tr>
                     <tr>
                         <td><img src="/src/massa01.png" alt="Massa Camarão" width="80px"></td>
@@ -79,9 +85,10 @@
                         <td>
                             <h4>R$34,90</h4>
                         </td>
-                        <label for="qtdCamaraoBranco"></label>
-                        <td><input type="number" name="qtdCamaraoBranco" id="quantidade-CamaraoBranco" min="1" max="10"
-                                value=""></td>
+                        <td><button class="btn-quant" onclick="adicionarItem('Massa Nordestina', 35.90)">
+                                +
+                            </button></td>
+                        </td>
                     </tr>
                     </tr>
                 </tbody>
@@ -95,7 +102,13 @@
         </div>
 
     </div>
-
+    <div class="hidden">
+        <div class="container-carinho">
+            <h3 class="title-car">Meu Carrinho</h3>
+            <div id="carrinho"></div>
+        </div>
+    </div>
+    <script src="carrinho.js"></script>
 </body>
 
 </html>

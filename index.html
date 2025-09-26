@@ -1,97 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width" , initial-scale=1.0" />
-    <title>Cardápio Digital</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet" />
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="logo">
-        <img src="/src/Logo-saborx.png" alt="Logo da SaborX" />
-      </div>
-      <nav class="nav">
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="menu-icon">
-          <span class="material-icons md-36">menu</span>
-        </label>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width" , initial-scale=1.0" />
+  <title>Cardápio Digital</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
 
-        <ul class="menu-items">
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="/src/Logo-saborx.png" alt="Logo da SaborX" />
+    </div>
+    <nav class="nav">
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span class="material-icons md-36">menu</span>
+      </label>
 
-    <main>
-      <section>
-        <div class="container">
-          <div class="menu">
-            <!-- Item 1 -->
-            <div class="food-item">
-              <a href="/pizzas.html">
-                <div class="food-imagem">
-                  <img src="/src/pizzas.png" alt="pizzas" />
-                </div>
-                <div class="food-name">Pizzas</div>
-              </a>
-            </div>
-            <!-- Item 2 -->
-            <div class="food-item">
-              <a href="/massas.html">
-                <div class="food-imagem">
-                  <img src="src/massas.png" alt="Massas" />
-                </div>
-                <div class="food-name">Massas</div>
-              </a>
-            </div>
+      <ul class="menu-items">
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <!-- Item 3 -->
-            <div class="food-item">
-              <a href="/pasteis.html">
-                <div class="food-imagem">
-                  <img src="/src/pastel.png" alt="pasteis" />
-                </div>
-                <div class="food-name">Pasteis</div>
-              </a>
-            </div>
+  <main>
+    <section>
+      <div class="container">
+        <div class="menu">
+          <!-- Item 1 -->
+          <div class="food-item">
+            <a href="/pizzas.html">
+              <div class="food-imagem">
+                <img src="/src/pizzas.png" alt="pizzas" />
+              </div>
+              <div class="food-name">Pizzas</div>
+            </a>
+          </div>
+          <!-- Item 2 -->
+          <div class="food-item">
+            <a href="/massas.html">
+              <div class="food-imagem">
+                <img src="src/massas.png" alt="Massas" />
+              </div>
+              <div class="food-name">Massas</div>
+            </a>
+          </div>
 
-            <!-- Item 4 -->
-            <div class="food-item">
-              <a href="/hambuguer.html">
-                <div class="food-imagem">
-                  <img src="/src/Burguer.png" alt="Burguer" />
-                </div>
-                <div class="food-name">Burguer</div>
-              </a>
-            </div>
+          <!-- Item 3 -->
+          <div class="food-item">
+            <a href="/pasteis.html">
+              <div class="food-imagem">
+                <img src="/src/pastel.png" alt="pasteis" />
+              </div>
+              <div class="food-name">Pasteis</div>
+            </a>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="food-item">
+            <a href="/hambuguer.html">
+              <div class="food-imagem">
+                <img src="/src/Burguer.png" alt="Burguer" />
+              </div>
+              <div class="food-name">Burguer</div>
+            </a>
           </div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <div class="menu-footer">
-        <div class="icone-footer">
-          <span class="material-icons md-24">
-            home
-            <div class="title-footer">Ínicio</div></span
-          >
-          <span class="material-icons md-24">
-            receipt
-            <div class="title-footer">Pedidos</div></span
-          >
-          <span class="material-icons md-24">
-            add_shopping_cart
-            <div class="title-footer">Carrinho</div>
-          </span>
-        </div>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+  <footer>
+    <div class="menu-footer">
+      <div class="icone-footer">
+        <div> <a href="/index.html" class="material-icons md-24">
+            home
+            <div class="title-footer">Ínicio</div>
+          </a>
+        </div>
+        <div>
+          <a href="#" class="material-icons md-24">
+            receipt
+            <div class="title-footer">Pedidos</div>
+        </div></a>
+        <div><a href="/carrinho.html" id="carrinho-icon" class="material-icons md-24">
+            add_shopping_cart
+            <span id="carrinho-contador" class="badge"></span>
+              <div class="title-footer">Carrinho</div>
+          </a>
+        </div>
+        </div>
+    </div>
+  </footer>
+  <div class="hidden">
+        <div class="container-carinho">
+            <h3 class="title-car">Meu Carrinho</h3>
+            <div id="carrinho"></div>
+        </div>
+    </div>
+  <script src="carrinho.js"></script>
+</body>
+
 </html>
